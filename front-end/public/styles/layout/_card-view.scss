@@ -1,0 +1,76 @@
+#app {
+  min-height: 100%;
+  background: url('/img/landing-bg.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: .5em 4em;
+}
+
+.cards-wrapper {
+  @include flex;
+  @include flex-space-between;
+  @include flex-align-stretch;
+}
+
+.card {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 3px 12px 24px -5px rgba(0, 0, 0, 0.3);
+  min-height: 400px;
+  cursor: pointer;
+
+  &__poster {
+    height: 300px;
+    background: #333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.card__content {
+  padding: 1.5em;
+  min-height: 80px;
+  .left{
+    float: left;
+    width: 80%;
+  }
+  .right {
+    float: left;
+    width: 20%;
+  }
+  .bottom {
+    display: none;
+    clear: both;
+    float: left;
+    width: 100%;
+    padding-top: 1em;
+    margin: 1.5em 0 1em;
+    cursor: pointer;
+
+    p {
+      margin-top: 28px;
+      color: #697c92;
+      @include font-size(11px);
+      text-align: right;
+      background: #f79ea4;
+      color: #fff;
+      padding: 5px 8px;
+      width: 25%;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.display {
+  display: block !important;
+}

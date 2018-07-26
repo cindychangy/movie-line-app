@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+h1 {
+  @include font-size(81px);
+  color: $white;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h2 {
+  @include font-size(20px);
+  font-weight: 500;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+

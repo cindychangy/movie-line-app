@@ -1,0 +1,16 @@
+body {
+  background: $bg-purple;
+}
+
+#splash-screen {
+  height: 100vh;
+  min-height: 100%;
+  background-size: cover;
+  padding: 1em;
+  @include flex;
+  @include flex-align-center;
+
+  h1 {
+    @include font-size(100px);
+  }
+}

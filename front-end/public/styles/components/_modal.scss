@@ -1,0 +1,74 @@
+#add-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: $white;
+  box-shadow: 3px 12px 24px -5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  z-index: 9000;
+  cursor: pointer;
+}
+
+.modal-control::after,
+.close::after {
+  content: "+";
+  position: relative;
+  top: 25px;
+  left: 25px;
+  @include font-size(36px);
+}
+  .close::after {
+    content: "x";
+    top: 23px;
+    left: 27px;
+  }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.modal-overlay {
+  background: rgba(36, 23, 115, 0.97);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.show {
+  visibility: visible !important;
+}
+
+.show ~ .modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  padding: 1em 4em;
+  margin: auto;
+  width: 95%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
